@@ -8,11 +8,12 @@ function Banner() {
   const [wordIndex, setWordIndex] = useState(0);
   const [text, setText] = useState('');
   const [paraText, setParaText] = useState('');
+  const [title, setTitle] = useState('');
 
   useEffect(() => {
     const timer = setTimeout(type, 200);
     return () => clearTimeout(timer);
-  }, [wordIndex, text, paraText]);
+  }, [wordIndex, text, paraText,title]);
 
   function type() {
     const currentWord = words[wordIndex];
@@ -29,6 +30,7 @@ function Banner() {
       setWordIndex((current) => (current + 1) % words.length);
 
       // Start typing the .para text
+      typeTitle()
       typePara();
     }
   }
@@ -48,9 +50,29 @@ function Banner() {
       // Optionally, you can perform any action when the paragraph typing is complete
     } else {
       // Schedule the next character typing after 50 milliseconds
-      setTimeout(typePara, 50);
+      setTimeout(typePara, 30);
     }
   }
+  function typeTitle() {
+    const jobtitle = 'Software Engineer';
+  
+    // Append characters until the title is complete
+    setTitle(current => {
+      const nextChar = jobtitle[current.length];
+      return current + (nextChar || ''); // Append the next character or an empty string if the title is complete
+    });
+  
+    // Check if the title is complete
+    if (title === jobtitle) {
+      // Optionally, you can perform any action when the title typing is complete
+    } else {
+      // Schedule the next character typing after 50 milliseconds
+      setTimeout(typeTitle, 50);
+    }
+  }
+  
+ 
+ 
 
   return (
   
@@ -59,9 +81,10 @@ function Banner() {
         <NavigationBar />
       </div>
       <section className='name ms-lg-5 ps-3' id='Home'>
-        <div className='col-9 col-lx-3 col-lg-5 col-md-7 col-sm-7 col-xs-8'>
+        <div className='col-9 col-lx-3 col-lg-5 col-md-7 col-sm-7 col-xs-8 banner_container'>
           <h1 className='display-1' dangerouslySetInnerHTML={{ __html: text.split(" ").join('<br/>') }} />
-          <p className='para pt-5 mt-5'>{paraText}</p>
+          <h3 className='h3 ms-lg-5'>{title}</h3>
+          <p className='para mt-5 '>{paraText}</p>
         </div>
       </section>
       <Skills/>

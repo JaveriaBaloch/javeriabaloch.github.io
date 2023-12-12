@@ -16,13 +16,15 @@ function App() {
     if (!vantaEffect) {
       setVantaEffect(GLOBE({
         el: myRef.current,
+        mouseControls: true,
         touchControls: true,
         gyroControls: false,
-        minHeight: viewportHeight,
+        minHeight: hundredVhAsInteger,
         minWidth: 200.00,
-        scale: 0.00,
+        scale: 1.00,
         scaleMobile: 1.00,
-        backgroundColor: 0x120a2f
+        color2: 0x871e1e,
+        size: 0.50
       }))
     }
     return () => {

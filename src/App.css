@@ -32,7 +32,9 @@
 .App-link {
   color: #61dafb;
 }
-
+::selection{
+    background: white;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -40,6 +42,11 @@
   to {
     transform: rotate(360deg);
   }
+}
+body{
+  position:relative;
+  width:100%;
+  height:100%
 }
 #bg{
   position:fixed;
@@ -49,5 +56,5 @@
   height:100vh;
 }
 main{
-  position:relative
+  position:relative;
 }

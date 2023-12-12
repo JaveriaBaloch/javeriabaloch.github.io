@@ -7,7 +7,6 @@
     font-family: 'Nabla', sans-serif;
 
 }
-
 #banner{
     padding: 2rem;
     position:relative;
@@ -28,18 +27,25 @@ margin-left:auto;
 .icon{
     background-color: rgb(255, 179, 0) !important;
 }
-.name h1{
+#Home h1,.name h3{
     font-family: 'Nabla', sans-serif;
+    transform: rotate(17deg);
+    margin-top:2rem
+
+}
+.banner_container{
+    /* transform: rotate(-17deg); */
 
 }
 .name .para{
-    transform: rotate(-10deg);
+    transform: rotate(-13deg);
+
     font-family: 'Fira Code', monospace;
     margin-top:2rem;
     /* font-family:'Tilt Prism'; */
 }
 #Home{
-    height:85vh;
+    padding-bottom: 10rem;
     /* max-height: 90vh; */
 }
 #AboutMe{

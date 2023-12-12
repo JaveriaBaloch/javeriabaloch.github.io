@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nabla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+*{
+    color: white;
+    font-family: 'Nabla', sans-serif;
+
+}
+
+#banner{
+    padding: 2rem;
+}
+.name{
+    margin-top:5rem;
+    /* margin-left: 8rem; */
+}
+/* .name h1{
+    font-size: 6rem;
+
+} */
+.ml-auto{
+width:fit-content;
+margin-left:auto;
+}
+.icon{
+    background-color: rgb(255, 179, 0) !important;
+}
+.name h1{
+    font-family: 'Nabla', sans-serif;
+
+}
+.name .para{
+    font-family: 'Fira Code', monospace;
+    margin-top:2rem;
+    /* font-family:'Tilt Prism'; */
+}

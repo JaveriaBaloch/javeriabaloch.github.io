@@ -3,7 +3,6 @@ import React, { useState, useEffect, useRef } from 'react'
 import './App.css';
 import GLOBE from 'vanta/dist/vanta.globe.min'
 import Banner from './components/banner';
-import NavigationBar from './components/navbar';
 function App() {
   const [vantaEffect, setVantaEffect] = useState(null)
   const myRef = useRef(null)
@@ -21,7 +20,7 @@ function App() {
         gyroControls: false,
         minHeight: viewportHeight,
         minWidth: 200.00,
-        scale: 1.00,
+        scale: 0.00,
         scaleMobile: 1.00,
         backgroundColor: 0x120a2f
       }))
@@ -31,8 +30,10 @@ function App() {
     }
   }, [vantaEffect])
   return <main>
-    <div ref={myRef}>
-      <Banner/>
+    <div ref={myRef} id="bg">
+    </div>
+    <div>
+    <Banner/>
     </div>
 </main>
 }

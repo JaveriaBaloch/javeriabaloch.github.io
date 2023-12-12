@@ -10,8 +10,10 @@
 
 #banner{
     padding: 2rem;
+    position:relative;
+    height: auto;
 }
-.name{
+#Home{
     margin-top:5rem;
     /* margin-left: 8rem; */
 }
@@ -31,7 +33,15 @@ margin-left:auto;
 
 }
 .name .para{
+    transform: rotate(-10deg);
     font-family: 'Fira Code', monospace;
     margin-top:2rem;
     /* font-family:'Tilt Prism'; */
+}
+#Home{
+    height:85vh;
+    /* max-height: 90vh; */
+}
+#AboutMe{
+
 }

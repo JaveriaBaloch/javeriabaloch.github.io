@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './css/banner.css';
 import NavigationBar from './navbar';
+import Skills from './skills';
 
 function Banner() {
   const words = ['Javeria Baloch'];
@@ -52,14 +53,27 @@ function Banner() {
   }
 
   return (
+  
     <div id="banner">
       <div className="ml-auto">
         <NavigationBar />
       </div>
-      <section className='name ms-5 ps-3' id='#Home'>
-        <div className='col-lx-3 col-lg-4 col-md-8 col-sm-11'>
+      <section className='name ms-lg-5 ps-3' id='Home'>
+        <div className='col-9 col-lx-3 col-lg-6 col-md-7 col-sm-7 col-xs-8'>
           <h1 className='display-1' dangerouslySetInnerHTML={{ __html: text.split(" ").join('<br/>') }} />
-          <p className='para'>{paraText}</p>
+          <p className='para pt-5 mt-5'>{paraText}</p>
+        </div>
+      </section>
+      <Skills/>
+      <section id='AboutMe'>
+        <div>
+      <h3>My Roles</h3>
+          <ul>
+            <li>Web Devloper</li>
+            <li>App Devloper</li>
+            <li>Scrum Master</li>
+            <li>Chief Technical Officer</li>
+          </ul>
         </div>
       </section>
     </div>

@@ -41,3 +41,13 @@
     transform: rotate(360deg);
   }
 }
+#bg{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100vw;
+  height:100vh;
+}
+main{
+  position:relative
+}

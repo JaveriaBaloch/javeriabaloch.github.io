@@ -59,7 +59,7 @@ function Banner() {
         <NavigationBar />
       </div>
       <section className='name ms-lg-5 ps-3' id='Home'>
-        <div className='col-9 col-lx-3 col-lg-6 col-md-7 col-sm-7 col-xs-8'>
+        <div className='col-9 col-lx-3 col-lg-5 col-md-7 col-sm-7 col-xs-8'>
           <h1 className='display-1' dangerouslySetInnerHTML={{ __html: text.split(" ").join('<br/>') }} />
           <p className='para pt-5 mt-5'>{paraText}</p>
         </div>
